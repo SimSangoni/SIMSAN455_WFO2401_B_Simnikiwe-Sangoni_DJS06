@@ -81,3 +81,12 @@ const nameToProvinceObject = names.reduce((newObject, name, index) => {
 {});
 
 console.log(nameToProvinceObject);
+
+console.log(
+
+  // 1. Log Products
+  products.map(product => product.product),
+
+  
+
+)
