@@ -107,12 +107,18 @@ console.log(
   products.reduce((result, product) => { 
     const price = parseInt(product.price); 
       if (price) { 
-        result.highest = Math.max(result.highest || 0, price); 
-        result.lowest = Math.min(result.lowest || Infinity, price); 
+        result.Highest = Math.max(result.Highest || 0, price); 
+        result.Lowest = Math.min(result.Lowest || Infinity, price); 
       } 
-        return result; }, 
-        {highest: undefined, lowest: undefined})
+        return result
+   }, 
+    {Highest: undefined, Lowest: undefined}),
+
+  // 6. Object Transformation
+Object.entries(products).reduce((acc, [index, product]) => {
+  acc.push({ name: product.product, cost: product.price });
+      return acc;
+    }, []),
 
 
-
-)
+);
