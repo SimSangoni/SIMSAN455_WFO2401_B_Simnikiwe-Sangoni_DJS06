@@ -98,6 +98,8 @@ console.log(
     .map(product => parseInt(product.price))
     // Calculate total price using reduce
     .reduce((total, price) => total + price, 0), 
-  
 
+    // 4. Concatenate Product Names
+  products.reduce((concatenatedNames, product) => 
+    concatenatedNames + product.product, ''),
 )
