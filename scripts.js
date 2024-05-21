@@ -60,3 +60,24 @@ Log the count of remaining provinces. */
 
 const filterCape = provinces.filter(province => !province.includes('Cape'));
 console.log(filterCape);
+
+/* 6. **Finding 'S'**: 
+Create a boolean array using `map` and `some` to determine if a name contains the letter 'S'.
+ */
+
+const containsS = names.map(name => 
+  Array.from(name).some(char => char.toLowerCase() === 's')
+);
+console.log(containsS);
+
+/* 7. **Creating Object Mapping**: 
+Use `reduce` to transform the names array into an object mapping 
+names to their respective provinces. */
+
+const nameToProvinceObject = names.reduce((newObject, name, index) => {
+  newObject[name] = provinces[index];
+  return newObject;
+}, 
+{});
+
+console.log(nameToProvinceObject);
