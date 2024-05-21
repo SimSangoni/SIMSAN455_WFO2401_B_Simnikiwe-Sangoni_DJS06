@@ -53,3 +53,10 @@ const nameLengths = names.map(name => {
 /* 4. **Sorting**: 
 Use `sort` to alphabetically sort the provinces.  */
 console.log(provinces.sort());
+
+/* 5. **Filtering Cape**: 
+Use `filter` to remove provinces containing "Cape". 
+Log the count of remaining provinces. */
+
+const filterCape = provinces.filter(province => !province.includes('Cape'));
+console.log(filterCape);
