@@ -88,6 +88,12 @@ console.log(
   products.map(name => name.product),
 
   // 2. Filter by Name Length
-  products.filter(name => name.product.length <= 5).map(name => name.product)
+  products.filter(name => name.product.length <= 5).
+  map(name => name.product),
+
+  // 3. Price Manipulation
+  products
+  .filter(product => (typeof product.price === 'string' && product.price.trim() !== '') || (typeof product.price === 'number'))
+  
 
 )
