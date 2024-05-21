@@ -94,6 +94,8 @@ console.log(
   // 3. Price Manipulation
   products
   .filter(product => (typeof product.price === 'string' && product.price.trim() !== '') || (typeof product.price === 'number'))
-  
+    // Convert string prices to numbers
+    .map(product => parseInt(product.price))
+ 
 
 )
