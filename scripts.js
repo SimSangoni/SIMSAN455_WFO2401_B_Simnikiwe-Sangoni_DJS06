@@ -50,3 +50,6 @@ const nameLengths = names.map(name => {
   console.log(name.length);
 });
 
+/* 4. **Sorting**: 
+Use `sort` to alphabetically sort the provinces.  */
+console.log(provinces.sort());
