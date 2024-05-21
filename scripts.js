@@ -96,6 +96,8 @@ console.log(
   .filter(product => (typeof product.price === 'string' && product.price.trim() !== '') || (typeof product.price === 'number'))
     // Convert string prices to numbers
     .map(product => parseInt(product.price))
- 
+    // Calculate total price using reduce
+    .reduce((total, price) => total + price, 0), 
+  
 
 )
