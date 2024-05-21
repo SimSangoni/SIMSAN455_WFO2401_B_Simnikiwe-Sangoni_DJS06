@@ -85,8 +85,9 @@ console.log(nameToProvinceObject);
 console.log(
 
   // 1. Log Products
-  products.map(product => product.product),
+  products.map(name => name.product),
 
-  
+  // 2. Filter by Name Length
+  products.filter(name => name.product.length <= 5).map(name => name.product)
 
 )
