@@ -94,12 +94,25 @@ console.log(
   // 3. Price Manipulation
   products
   .filter(product => (typeof product.price === 'string' && product.price.trim() !== '') || (typeof product.price === 'number'))
-    // Convert string prices to numbers
-    .map(product => parseInt(product.price))
-    // Calculate total price using reduce
-    .reduce((total, price) => total + price, 0), 
+  // Convert string prices to numbers
+  .map(product => parseInt(product.price))
+  // Calculate total price using reduce
+  .reduce((total, price) => total + price, 0), 
 
-    // 4. Concatenate Product Names
+  // 4. Concatenate Product Names
   products.reduce((concatenatedNames, product) => 
     concatenatedNames + product.product, ''),
+
+  // 5. Find Extremes in Prices
+  products.reduce((result, product) => { 
+    const price = parseInt(product.price); 
+      if (price) { 
+        result.highest = Math.max(result.highest || 0, price); 
+        result.lowest = Math.min(result.lowest || Infinity, price); 
+      } 
+        return result; }, 
+        {highest: undefined, lowest: undefined})
+
+
+
 )
