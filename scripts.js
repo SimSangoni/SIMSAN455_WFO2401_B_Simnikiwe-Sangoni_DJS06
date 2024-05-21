@@ -47,5 +47,6 @@ const upperCaseProvinces = provinces.map(province => {
 Create a new array using `map` that contains the length of each name. */
 
 const nameLengths = names.map(name => {
-  console.log(name.length());
+  console.log(name.length);
 });
+
