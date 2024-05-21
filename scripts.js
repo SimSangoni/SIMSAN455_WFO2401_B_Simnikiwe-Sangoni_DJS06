@@ -32,4 +32,20 @@ provinces.forEach(province => {
 // Log each name with a matching province
 names.forEach((name, index) =>{
   console.log(`${name} (${provinces[index]})`)
-})
+});
+
+/* 2. **Uppercase Transformation**: 
+Use `map` to create a new array of province names in all uppercase. 
+Log the new array to the console. */
+
+const upperCaseProvinces = provinces.map(province => {
+  console.log(province.toUpperCase());
+});
+
+
+/* 3. **Name Lengths**: 
+Create a new array using `map` that contains the length of each name. */
+
+const nameLengths = names.map(name => {
+  console.log(name.length());
+});
